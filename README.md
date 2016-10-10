@@ -1,5 +1,9 @@
 # Gun Redux TodoMVC Example
 
+POC, WIP, etc...
+
+DO NOT USE
+
 In the project directory, you can run:
 
 ### `npm start`
