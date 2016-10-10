@@ -149,7 +149,7 @@ export default function GunMiddleware(gun, _options) {
 
   function listen(path, dispatch) {
     let db = gunner[path.path];
-    db.map(function (val, id) {
+    db.map().val(function (val, id) {
       // console.log('map: ', count++, countMap++);
       if(! val) {
         if(path.docs[id]) {
@@ -180,7 +180,7 @@ export default function GunMiddleware(gun, _options) {
 
   function put(doc, db, path) {
     path.docs[doc.id] = extend({}, doc );
-    let toPut = toGun(doc)
+    let toPut = toGun(doc);
     db.path(doc.id).put(toPut);
   }
 
